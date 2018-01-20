@@ -9,3 +9,7 @@
 .idea/uiDesigner.xml
 .idea/workspace.xml
 springboot/target/
+.idea/dataSources.local.xml
+.idea/dataSources/
+springboot/src/main/resources/rebel.xml
+
