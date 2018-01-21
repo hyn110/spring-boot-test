@@ -2,6 +2,7 @@ package com.fmi110.springboot.service.impl;
 
 import com.fmi110.springboot.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
@@ -35,8 +36,10 @@ public class UserService implements IUserService {
     /**
      * 获取用户总量
      */
+    @Cacheable(value = "oneMinute")  // 指定使用的缓存对象为 onMinute (在 ehcache.xml 中配置的)
     @Override
-    public Integer getAllUsers() {
+    public Integer getAllUsersCount() {
+        System.out.println("===========getAllUsersCount==========");
         return jdbcTemplate.queryForObject("select count(1) from user",Integer.class);
     }
 

@@ -41,7 +41,7 @@ public class RedisConfig {
      * @return
      */
     @Bean
-    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory jedisConnectionFactory) {
+    public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory jedisConnectionFactory) {
 
         System.out.println("=====redisTemplate=====jedisConnectionFactory="+jedisConnectionFactory);
         // 1 构建序列化器
@@ -52,7 +52,7 @@ public class RedisConfig {
         mapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
         jackson2JsonRedisSerializer.setObjectMapper(mapper);
 
-        RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
+        RedisTemplate<Object, Object> redisTemplate = new RedisTemplate<>();
         // 2 设置 redisTemplate 连接的redis服务器
         redisTemplate.setConnectionFactory(jedisConnectionFactory);
         // 3 设置序列化器

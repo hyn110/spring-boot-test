@@ -17,7 +17,7 @@ public interface IUserService {
     /**
      * 获取用户总量
      */
-    Integer getAllUsers();
+    Integer getAllUsersCount();
 
     /**
      * 删除所有用户

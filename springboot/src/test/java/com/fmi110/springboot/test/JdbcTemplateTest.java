@@ -24,4 +24,10 @@ public class JdbcTemplateTest {
         userService.deleteByName("黑马");
     }
 
+    @Test
+    public void testCache(){
+        System.out.println("============1======="+ userService.getAllUsersCount());
+        System.out.println("============2======="+ userService.getAllUsersCount());
+    }
+
 }
