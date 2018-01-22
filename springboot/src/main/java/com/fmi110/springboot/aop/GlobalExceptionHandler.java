@@ -1,4 +1,4 @@
-package com.fmi110.springboot.exception;
+package com.fmi110.springboot.aop;
 
 import com.fmi110.springboot.dto.ErrorInfo;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -8,9 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * 全局异常处理类
- */
+
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
