@@ -1,10 +1,16 @@
 package com.fmi110.springboot.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class User {
     @Id
@@ -18,41 +24,5 @@ public class User {
     public User(String name, Integer age) {
         this.name = name;
         this.age = age;
-    }
-
-    public User() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-               "id=" + id +
-               ", name='" + name + '\'' +
-               ", age=" + age +
-               '}';
     }
 }

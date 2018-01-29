@@ -16,8 +16,8 @@ public class MybatisTest {
 
     @Test
     public void testMybatis(){
-        User user = new User("spring", 5);
-        userMapper.insert(user);
+//        User user = new User("spring", 5);
+//        userMapper.insert(user);
     }
 
     @Test
